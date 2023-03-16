@@ -6,7 +6,7 @@
     overflow: scroll;
     position: absolute;
     background-color: #282A3A;
-    z-index: 999999999999999999999999;
+    z-index: 999999999999999999999999 !important;
     display: flex;
     justify-content: center;
 
