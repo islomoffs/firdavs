@@ -1,0 +1,87 @@
+header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bgc-effect {
+    position: absolute;
+    top: 0;
+    width: 60%;
+    z-index: 1;
+    height: 55%;
+    background-image: linear-gradient(45deg, blue, red, blueviolet);
+    filter: blur(45px);
+}
+
+header nav {
+    width: 80%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    background-color: #ffffff39;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+nav ol li {
+    font-size: 2rem;
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul button {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 50px;
+    cursor: pointer;
+    background-color: inherit;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    font-weight: 300;
+    color: rgba(14, 1, 255, 0.748);
+    border: 1px solid rgba(14, 1, 255, 0.774);
+}
+
+nav ul li {
+    color: #000;
+    font-weight: 300;
+    list-style: none;
+}
+
+.skils img {
+    width: 50px;
+}
+
+
+/* dark mode  */
+.darkmode {
+    width: 150px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    cursor: pointer;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.darkmode span:nth-child(2) {
+    color: #000;
+    display: none;
+}
