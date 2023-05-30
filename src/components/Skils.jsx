@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react'
-import 'animate.css';
+import React from 'react'
 
 import Html from './icons/html.png'
 import Css from './icons/css3.png'
@@ -10,7 +9,6 @@ import Figma from './icons/figma.png'
 import Ps from './icons/photoshop-logo (1).png'
 import Github from './icons/github.png'
 import Ava from './icons/home.gif'
-
 
 export default function Skils({ dark }) {
 

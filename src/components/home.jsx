@@ -1,6 +1,5 @@
 import React from 'react'
 import Skils from './Skils'
-import "./css/Home.css"
 import About from './About'
 import Footer from './footer'
 import Portfoliyo from './mywork'

@@ -1,7 +1,4 @@
 import React from 'react'
-import "./css/Mywork.css"
-
-// import Ava from './img/ava.jpg'
 
 export default function mywork({ dark }) {
   return (

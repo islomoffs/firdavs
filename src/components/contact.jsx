@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Footer from './footer';
-import "./css/Contact.css"
-export default function Contact({ dark }) {
+export default function Contact() {
 
   const [modal, setModal] = useState(false)
   const handleModalClick = () => {

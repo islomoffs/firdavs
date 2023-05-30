@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/header'
 import ScrollTop from './ScrollTop'
 import "../src/components/css/Responsive.css"
+import "./components/css/Home.css"
+import "./components/css/About.css"
+import "./components/css/Contact.css"
+import "./components/css/header.css"
+import "./components/css/Mywork.css"
+
 
 export default function App() {
 

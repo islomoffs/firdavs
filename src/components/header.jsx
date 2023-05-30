@@ -1,9 +1,6 @@
-import React, { useContext, useState } from 'react'
-import { FiSmartphone } from 'react-icons/fi'
+import React, { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import "./css/header.css"
 import { AiOutlineMenu } from 'react-icons/ai'
-// import { Context } from '../Context/Context'
 import Home from './home'
 import Contact from './contact'
 import MyWork from './mywork'

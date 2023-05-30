@@ -1,6 +1,5 @@
 import React from 'react'
 import AboutAva from './img/social.gif'
-import "./css/About.css"
 import { useNavigate } from 'react-router-dom'
 import Insta from './icons/insta.png'
 import Tg from './icons/telegram.png'
