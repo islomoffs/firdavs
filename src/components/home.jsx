@@ -17,7 +17,9 @@ export default function home({ dark }) {
             <div className="portfoliyo-home">
                 <Portfoliyo dark={dark} />
             </div>
-            <Footer />
+            <div className="footer-home">
+                <Footer dark={dark} />
+            </div>
         </div>
     )
 }

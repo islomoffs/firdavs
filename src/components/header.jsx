@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { FiSmartphone } from 'react-icons/fi'
 import { Routes, Route, Link } from 'react-router-dom'
 import "./css/header.css"
-
+import { AiOutlineMenu } from 'react-icons/ai'
 // import { Context } from '../Context/Context'
 import Home from './home'
 import Contact from './contact'
@@ -11,13 +11,16 @@ import MyWork from './mywork'
 
 export default function Header({ dark, setDark }) {
 
+    const [nav, setNav] = useState(false)
 
     const handleDark = () => {
         setDark(!dark)
         console.log(dark);
     }
 
-
+    const handleNavbar = () => {
+        console.log("salom");
+    }
 
     return (
 
@@ -29,7 +32,7 @@ export default function Header({ dark, setDark }) {
                             Firdavs.dev
                         </li>
                     </ol>
-                    <ul>
+                    <ul id='resheader' style={{ top: nav !== true ? "30vh" : "-100vh" }}>
                         <Link to='/'>
                             <li style={{ color: dark !== true ? "#000" : "#fff" }}>
                                 home
@@ -41,14 +44,37 @@ export default function Header({ dark, setDark }) {
                             </li>
                         </Link>
                         <section className='darkmode' onClick={handleDark} style={{ backgroundColor: dark !== true ? "#fff" : "#000", border: dark !== true ? "1px solid #000" : "1px solid  #fff" }}>
-                            <span style={{ display: dark !== true ? "none" : "block", color: dark !== true ? "#000" : "#fff" }}>
+                            <span style={{ display: dark == true ? "none" : "block", color: dark !== true ? "#000" : "#fff" }}>
                                 White
                             </span>
-                            <span style={{ display: dark !== true ? "block" : "none", color: dark !== true ? "#000" : "#fff" }}>
+                            <span style={{ display: dark !== true ? "none" : "block", color: dark !== true ? "#000" : "#fff" }}>
                                 Dark
                             </span>
                         </section>
                     </ul>
+                    <ul id='header_res' style={{ top: nav !== true ? "30vh" : "-100vh" }}>
+                        <Link to='/'>
+                            <li style={{ color: dark !== true ? "#000" : "#fff" }}>
+                                home
+                            </li>
+                        </Link>
+                        <Link to='contact'>
+                            <li style={{ color: dark !== true ? "#000" : "#fff" }}>
+                                contact
+                            </li>
+                        </Link>
+                        <section className='darkmode' onClick={handleDark} style={{ backgroundColor: dark !== true ? "#fff" : "#000", border: dark !== true ? "1px solid #000" : "1px solid  #fff" }}>
+                            <span style={{ display: dark == true ? "none" : "block", color: dark !== true ? "#000" : "#fff" }}>
+                                White
+                            </span>
+                            <span style={{ display: dark !== true ? "none" : "block", color: dark !== true ? "#000" : "#fff" }}>
+                                Dark
+                            </span>
+                        </section>
+                    </ul>
+                    <ol className='haburger' onClick={handleNavbar}>
+                        <span style={{ color: dark !== true ? "#000" : "#fff" }} ><AiOutlineMenu /></span>
+                    </ol>
                 </nav>
                 <div className="bgc-effect">
                 </div>
@@ -58,6 +84,7 @@ export default function Header({ dark, setDark }) {
                 <Route path='mywork' element={<MyWork />} ></Route>
                 <Route path='contact' element={<Contact />} ></Route>
             </Routes>
+
         </>
     )
 }

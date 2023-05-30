@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import 'animate.css';
 
 import Html from './icons/html.png'
@@ -11,7 +11,30 @@ import Ps from './icons/photoshop-logo (1).png'
 import Github from './icons/github.png'
 import Ava from './icons/home.gif'
 
+
 export default function Skils({ dark }) {
+
+
+  function handleButtonClick() {
+    fetch('../cv.pdf')
+      .then(response => response.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(
+          new Blob([blob]),
+        );
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute(
+          'download',
+          'My_Resume.pdf',
+        );
+        document.body.appendChild(link);
+        link.click();
+        link.parentNode.removeChild(link);
+      });
+  }
+
+
   return (
     <div className='Skils' style={{ backgroundColor: dark !== true ? "#ffffff9e" : "#000000" }}>
       <div className="top-skils">
@@ -36,11 +59,13 @@ export default function Skils({ dark }) {
             <img src={Github} alt="sa" />
           </div>
           <div className="buttons">
-            <button>Resume</button>
-            <a href=""><button>Github</button></a>
+            <button onClick={handleButtonClick} >Resume</button>
+            <a target='_blank' href="https://github.com/unknownKhimmatov">Github</a>
           </div>
         </div>
       </div>
     </div>
   )
 }
+
+

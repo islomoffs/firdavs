@@ -7,6 +7,10 @@
     flex-direction: column;
 }
 
+#header_res{
+    display: none;
+}
+
 .skils-home {
     width: 80%;
     display: flex;
@@ -22,25 +26,31 @@
     flex-direction: column;
     align-items: center;
     padding: 60px 0px;
+    /* border: 1px solid black; */
 }
 
 
 .top-skils img {
+    /* border: 1px solid black; */
     height: 400px;
+
 }
 
 .name {
+    /* border: 1px solid black; */
     text-align: center;
     font-size: 3rem;
 }
 
 .item-description {
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .description span {
+    /* border: 1px solid black; */
     text-align: center;
     color: gray;
 }
@@ -83,15 +93,25 @@
     background-color: blueviolet;
     color: #fff;
     font-size: 1rem;
+    width: 140px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: button 10s infinite;
     border-radius: 30px;
     border: none;
 }
 
-.buttons button:nth-child(2) {
+.buttons a:nth-child(2) {
     background-color: blueviolet;
     color: #fff;
     font-size: 1rem;
+    width: 140px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: button 5s infinite;
     border-radius: 30px;
     border: none;
@@ -112,4 +132,3 @@
         background-color: rgb(4, 0, 255);
     }
 }
-

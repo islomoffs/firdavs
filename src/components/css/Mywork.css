@@ -1,0 +1,114 @@
+.portfoliyo-home {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+}
+
+.mywork {
+    width: 90%;
+    height: 90%;
+}
+
+.title-work {
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.title-work i{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.title-work h3 {
+    font-size: 2rem;
+}
+
+.cards-mywork {
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: space-between;
+    gap: 15px;
+    position: absolute;
+    z-index: 3;
+}
+
+.cards-mywork .card-mywork {
+    height: 500px;
+    border: 1px solid rgb(97, 97, 97);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff72;
+    overflow: hidden;
+}
+
+
+.card-mywork .top-work-card:nth-child(1) {
+    width: 100%;
+    height: 70%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 450px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.card-mywork .top-work-card:nth-child(1):hover {
+    border-radius: 0;
+    transition: .3s;
+    height: 100%;
+}
+
+.card-mywork .top-work-card:nth-child(1):nth-child(1) h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+}
+
+.bgc-effect-mywork {
+    position: absolute;
+    top: 25%;
+    width: 60%;
+    z-index: 1;
+    height: 60%;
+    left: 20%;
+    background-image: linear-gradient(45deg, orange, blue, red, black, blueviolet);
+    filter: blur(65px);
+}
+
+
+.img-my-work {
+    width: 99%;
+    height: 99%;
+    display: none;
+    transition: .3s;
+}
+.img-my-work img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-mywork .top-work-card:nth-child(1):hover>h1 {
+    display: none;
+}
+
+
+.card-mywork .top-work-card:nth-child(1):hover>.img-my-work {
+    display: block;
+    transition: .3s;
+}

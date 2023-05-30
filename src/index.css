@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -23,6 +24,10 @@ body {
     height: auto;
 }
 
+.haburger {
+    display: none;
+}
+
 .app {
     width: 100%;
     overflow: hidden;
@@ -31,8 +36,8 @@ body {
 }
 
 .scrolltop {
-    width: 50px;
-    aspect-ratio: 1/1.2;
+
+    padding: 10px 7px;
     background-color: black;
     position: fixed;
     bottom: 40px;
@@ -46,4 +51,3 @@ body {
     border-radius: 10px;
     border: 1px solid white;
 }
-

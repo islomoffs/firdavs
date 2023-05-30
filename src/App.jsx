@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Header from './components/header'
-import { BsFillArrowUpCircleFill } from 'react-icons/bs'
+import ScrollTop from './ScrollTop'
+import "../src/components/css/Responsive.css"
+
 export default function App() {
 
     const [dark, setDark] = useState(false)
@@ -27,7 +29,8 @@ export default function App() {
 
 
     return (
-        <div className='app' style={{ backgroundColor: dark !== true ? "#ffffff9e" : "#000000" }}>
+        <div className='app' style={{ backgroundColor: dark !== true ? "#fff" : "#000" }} >
+            <ScrollTop />
             <Header dark={dark} setDark={setDark} />
 
 
@@ -41,7 +44,7 @@ export default function App() {
 
             >
                 Top
-                
+
             </div>
         </div>
     )
